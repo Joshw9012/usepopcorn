@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 const containerStyle = {
   display: "flex",
@@ -10,7 +11,12 @@ const starContianerStyle = {
   display: "flex",
 };
 
-export default function StartRating({
+//props check for  maxRating
+StarRating.propTypes = {
+  maxRating: PropTypes.number.isRequired,
+};
+
+export default function StarRating({
   maxRating = 5,
   color = "#fcc419",
   size = 48,
